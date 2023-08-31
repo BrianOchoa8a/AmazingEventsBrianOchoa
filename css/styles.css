@@ -1,9 +1,10 @@
+
 .img-logo{
     width: 30%;
 }
 
 .img-slider{
-    height: 600px;
+    height: 200px;
 }
 
 .styles-cards{
@@ -15,40 +16,13 @@
     align-items: baseline;
 }
 
-@media (min-width: 768px) {
-
-    .img-slider{
-        width: 200px;
-    }
-
-    .footer-stile{
-        margin: 1%;
-        width: 3%;
-    }
-
-}
-
-@media (min-width: 320px) {
-
-    .img-slider{
-        width: 100px;
-    }
-
-    .footer-stile{
-        margin: 0.5%;
-        width: 3%;
-    }
-
-}
-
-
 .stile-card{
     margin: 3%;
 }
 
 .footer-stile{
     margin: 1%;
-    width: 3px;
+    width: 50%;
 }
 
 .formulario-stile{
