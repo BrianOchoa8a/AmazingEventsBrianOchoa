@@ -19,7 +19,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-dark">
+      <nav class="navbar navbar-expand-lg colorbhcheck">
         <div class="container-fluid">
           <img
             class="img-logo"
@@ -108,7 +108,6 @@
               <a class="nav-link active text-light" aria-current="page" href="#"
                 ><h1>Upcoming Events</h1></a
               >
-              <p>Lorem, ipsum dolor.</p>
             </div>
           </div>
           <div class="carousel-item active img-slider">
@@ -121,7 +120,6 @@
               <a class="nav-link active text-light" aria-current="page" href="#"
                 ><h1>Upcoming Events</h1></a
               >
-              <p>Lorem, ipsum dolor.</p>
             </div>
           </div>
           <div class="carousel-item active img-slider">
@@ -134,7 +132,6 @@
               <a class="nav-link active text-light" aria-current="page" href="#"
                 ><h1>Upcoming Events</h1></a
               >
-              <p>Lorem, ipsum dolor.</p>
             </div>
           </div>
           <div class="carousel-item active img-slider">
@@ -147,7 +144,6 @@
               <a class="nav-link active text-light" aria-current="page" href="#"
                 ><h1>Upcoming Events</h1></a
               >
-              <p>Lorem, ipsum dolor.</p>
             </div>
           </div>
         </div>
@@ -170,61 +166,26 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
-      <nav class="navbar bg-body-tertiary styles-cards">
-        <div class="container-fluid">
-          <div class="d-flex align-self-strech">
-            <label for="miCheckbox">
-              <input type="checkbox" id="miCheckbox" name="miCheckbox" />
-            </label>
-            <h6>Books</h6>
-          </div>
-          <div class="d-flex align-self-strech">
-            <label for="miCheckbox1">
-              <input type="checkbox" id="miCheckbox1" name="miCheckbox" />
-            </label>
-            <h6>Cinema</h6>
-          </div>
-          <div class="d-flex align-self-strech">
-            <label for="miCheckbox2">
-              <input type="checkbox" id="miCheckbox2" name="miCheckbox" />
-            </label>
-            <h6>Costume Party</h6>
-          </div>
-          <div class="d-flex align-self-strech">
-            <label for="miCheckbox3">
-              <input type="checkbox" id="miCheckbox3" name="miCheckbox" />
-            </label>
-            <h6>Food Fair</h6>
-          </div>
-          <div class="d-flex align-self-strech">
-            <label for="miCheckbox4">
-              <input type="checkbox" id="miCheckbox4" name="miCheckbox" />
-            </label>
-            <h6>Books</h6>
-          </div>
-          <a class="navbar-brand"></a>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </nav>
     </header>
     <main>
+      <div class="navbar colorbhcheck" id="checkId">
+        <a class="navbar-brand"></a>
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
       <div
         class="d-flex flex-wrap justify-content-center styles-cards"
         id="fechaUpcomingId"
       ></div>
     </main>
-    <footer class="footer bg-dark text-light">
+    <footer class="footer colorbhcheck text-light">
       <div class="d-flex align-items-center justify-content-between">
         <div class="d-flex justify-content-around">
           <a href="#"
@@ -262,5 +223,6 @@
 
     <script src="../script/data.js"></script>
     <script src="../script/upcomingEvents.js"></script>
+    <script src="../script/checkBoxes.js"></script>
   </body>
 </html>

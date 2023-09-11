@@ -1,3 +1,4 @@
+const $filtrado = document.getElementById ('checkId');
 function estructuraTarjeta (datos){
     return `<div class="card col-md-4 stile-card" style="width: 18rem">
     <img src="${datos.image}" class="card-img-top" alt="..." />
@@ -40,3 +41,21 @@ function estructuraTarjeta (datos){
     }
     
     insertarTarjetas(listados, "fechaUpcomingId");
+
+    //escuchador de check
+    $filtrado.addEventListener( "change" , () => {
+    const returnfiltroPorCheck = listaTarjeta(filtroPorCheck(listadoPorFecha))
+    insertarTarjetas(returnfiltroPorCheck, "fechaUpcomingId")
+  });
+  
+  //filtrado por check
+   function filtroPorCheck(array){
+     const nodeListCheck = document.querySelectorAll("input[type=checkbox]:checked");
+     console.log(nodeListCheck);
+     const arrayChech = Array.from(nodeListCheck);
+     console.log(arrayChech);
+     const arrayValores = arrayChech.map( input => input.value);
+     console.log(arrayValores);
+     const filtradosCheck = array.filter(evento=>(arrayValores.includes(evento.category))|| arrayValores.length==0);
+     return(filtradosCheck);
+  }
