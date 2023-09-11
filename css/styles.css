@@ -40,3 +40,14 @@ main{
 .boton-stile{
     margin-top: 10%;
 }
+
+.card-img-top{
+    height: 13rem;
+    object-fit: cover;
+}
+
+.form-search{
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
