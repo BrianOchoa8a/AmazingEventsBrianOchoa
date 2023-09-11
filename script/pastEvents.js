@@ -1,4 +1,5 @@
 const $filtrado = document.getElementById ('checkId');
+let $search = document.getElementById('searchInput');
 function estructuraTarjeta (datos){
     return `<div class="card col-md-4 stile-card" style="width: 18rem">
     <img src="${datos.image}" class="card-img-top" alt="..." />
@@ -41,20 +42,32 @@ function estructuraTarjeta (datos){
     
     insertarTarjetas(listados, "fechaPastId");
 
-        //escuchador de check
-        $filtrado.addEventListener( "change" , () => {
-            const returnfiltroPorCheck = listaTarjeta(filtroPorCheck(listadoPorFecha))
-            insertarTarjetas(returnfiltroPorCheck, "fechaPastId")
-          });
-          
-          //filtrado por check
-           function filtroPorCheck(array){
-             const nodeListCheck = document.querySelectorAll("input[type=checkbox]:checked");
-             console.log(nodeListCheck);
-             const arrayChech = Array.from(nodeListCheck);
-             console.log(arrayChech);
-             const arrayValores = arrayChech.map( input => input.value);
-             console.log(arrayValores);
-             const filtradosCheck = array.filter(evento=>(arrayValores.includes(evento.category))|| arrayValores.length==0);
-             return(filtradosCheck);
-          }
+    //escuchador de check
+    $filtrado.addEventListener( "change" , filtrosCruzados);
+  
+    //filtrado por check
+     function filtroPorCheck(array){
+       const nodeListCheck = document.querySelectorAll("input[type=checkbox]:checked");
+       const arrayChech = Array.from(nodeListCheck);
+       const arrayValores = arrayChech.map( input => input.value);
+       const filtradosCheck = array.filter(evento=>(arrayValores.includes(evento.category))|| arrayValores.length==0);
+       return(filtradosCheck);
+    }
+    
+    let $button = document.getElementById('searchButton');
+    
+    $button.addEventListener("click", (e) => {
+      e.preventDefault();
+      filtrosCruzados();
+      $search.value = "";
+    });
+    
+    function filtroSearch(array, input){
+      let tarjetaFiltrada = array.filter(tarjetas => tarjetas.name.toLowerCase().includes(input.toLowerCase()))
+      return tarjetaFiltrada;
+    };
+    
+    function filtrosCruzados(){
+      let filtroTotal = filtroSearch(filtroPorCheck(data.events), $search.value)
+      insertarTarjetas(listaTarjeta(filtroTotal), "fechaPastId");
+    };

@@ -1,5 +1,5 @@
 const $filtrado = document.getElementById ('checkId');
-
+let $search = document.getElementById('searchInput');
 
 function estructuraTarjeta (datos){
     return `<div class="card col-md-4 stile-card" style="width: 18rem">
@@ -33,10 +33,7 @@ insertarTarjetas(listado, "tarjetasId");
 
 
 //escuchador de check
-$filtrado.addEventListener( "change" ,  () => {
-    const returnfiltroPorCheck = listaTarjeta(filtroPorCheck(data.events))
-    insertarTarjetas(returnfiltroPorCheck, "tarjetasId")
-  });
+$filtrado.addEventListener( "change" , filtrosCruzados);
   
   //filtrado por check
    function filtroPorCheck(array){
@@ -50,11 +47,11 @@ $filtrado.addEventListener( "change" ,  () => {
      return(filtradosCheck);
   }
 
-  let $search = document.getElementById('searchInput');
   let $button = document.getElementById('searchButton');
 
   $button.addEventListener("click", (e) => {
     e.preventDefault();
+    filtrosCruzados();
     $search.value = "";
   });
 
@@ -63,3 +60,7 @@ $filtrado.addEventListener( "change" ,  () => {
     return tarjetaFiltrada;
   };
   
+  function filtrosCruzados(){
+    let filtroTotal = filtroSearch(filtroPorCheck(data.events), $search.value)
+    insertarTarjetas(listaTarjeta(filtroTotal), "tarjetasId");
+};
