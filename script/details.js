@@ -1,15 +1,26 @@
-// console.log([window.location.search]);
+let url = window.location.search
+let parametro = new URLSearchParams(url);
+let idEvento = parametro.get("serch");
 
-// let parametro = location.search;
 
+let comparacion = data.events.find((card) => card._id == idEvento);
 
-// let params = new URLSearchParams(parametro);
+function crearTargeta(tarjeta){
 
-// let iDCard = params.get("parametro");
+    return <div>  
+    <img  id="imagen-detalle" src="${tarjeta.image}" class="card-img-top" alt="food_fair">
+    <div class="card-body">
+      <h5 class="card-title">${tarjeta.title}</h5>
+      <p class="card-text">${tarjeta.description}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">category: ${tarjeta.category}</li>
+      <li class="list-group-item">Place: ${tarjeta.place}</li>
+      <li class="list-group-item">Capacity: ${tarjeta.capacity}</li>
+      <li class="list-group-item">Estimate: 900</li>
+      <li class="list-group-item">Price: $${tarjeta.price}</li>
+    </ul>
+    </div>
+}
 
-// let title = data.events.fine(card => card._id === iDCard);
-
-// //dom
-
-// let contenedorCardDetalle = document.getElementById("sectionCard");
-// console.log(contenedorCardDetalle)
+document.getElementById("tarjeta-detalle").innerHTML = crearTargeta(comparacion)

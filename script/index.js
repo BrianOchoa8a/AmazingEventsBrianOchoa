@@ -49,6 +49,7 @@ $filtrado.addEventListener( "change" , filtrosCruzados);
 
   let $button = document.getElementById('searchButton');
 
+  //escuchador de search
   $button.addEventListener("click", (e) => {
     e.preventDefault();
     filtrosCruzados();
@@ -60,6 +61,7 @@ $filtrado.addEventListener( "change" , filtrosCruzados);
     return tarjetaFiltrada;
   };
   
+  //filtro cruzado
   function filtrosCruzados(){
     let filtroTotal = filtroSearch(filtroPorCheck(data.events), $search.value)
     insertarTarjetas(listaTarjeta(filtroTotal), "tarjetasId");
