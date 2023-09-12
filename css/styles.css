@@ -1,3 +1,4 @@
+
 main{
     background-color: #edf2f4;
 }
@@ -50,4 +51,20 @@ main{
     margin-top: 2%;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-details{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.card{
+    margin-top: 5%;
 }

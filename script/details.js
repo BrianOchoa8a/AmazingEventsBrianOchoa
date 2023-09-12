@@ -1,16 +1,20 @@
-let url = window.location.search
+let url = window.location.search;
+
+console.log(url);
+
 let parametro = new URLSearchParams(url);
-let idEvento = parametro.get("serch");
+console.log(parametro);
+ 
+
+let idEvento = parametro.get("parametro");
 
 
 let comparacion = data.events.find((card) => card._id == idEvento);
 
-function crearTargeta(tarjeta){
-
-    return <div>  
-    <img  id="imagen-detalle" src="${tarjeta.image}" class="card-img-top" alt="food_fair">
+function crearTarjeta(tarjeta){
+    return `<img src=${tarjeta.image} class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">${tarjeta.title}</h5>
+      <h5 class="card-title">${tarjeta.name}</h5>
       <p class="card-text">${tarjeta.description}</p>
     </div>
     <ul class="list-group list-group-flush">
@@ -19,8 +23,7 @@ function crearTargeta(tarjeta){
       <li class="list-group-item">Capacity: ${tarjeta.capacity}</li>
       <li class="list-group-item">Estimate: 900</li>
       <li class="list-group-item">Price: $${tarjeta.price}</li>
-    </ul>
-    </div>
+    </ul>`
 }
 
-document.getElementById("tarjeta-detalle").innerHTML = crearTargeta(comparacion)
+document.getElementById("sectionCard").innerHTML = crearTarjeta(comparacion)
