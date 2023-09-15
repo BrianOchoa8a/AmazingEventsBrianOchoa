@@ -185,12 +185,15 @@
         </button>
       </div>
     </header>
+    <main>
     <div>
       <a class="navbar-brand"></a>
-      <div  class="navbar  colorbhcheck" id="checkId"></div>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput"/>
-        <button class="btn btn-outline-success colorbhcheck" type="submit" id="searchButton">
+      <div  class="navbar  colorbhcheck" id="checkId">
+
+      </div>
+      <form class="d-flex form-search" role="search"  id="searchButton">
+        <input class="form-control me-2" type="search" aria-label="Search" id="searchInput"/>
+        <button class="btn btn-outline-success colorbhcheck" type="submit">
           Search
         </button>
       </form>
@@ -237,8 +240,6 @@
       integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
       crossorigin="anonymous"
     ></script>
-    <script src="../script/data.js"></script>
-    <script src="../script/pastEvents.js"></script>
-    <script src="../script/checkBoxes.js"></script>
+    <script type="module" src="../script/pastEvents.js"></script>
   </body>
 </html>

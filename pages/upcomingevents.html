@@ -171,13 +171,15 @@
       
       <div>
         <a class="navbar-brand"></a>
-        <div  class="navbar  colorbhcheck" id="checkId"></div>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput"/>
-          <button class="btn btn-outline-success colorbhcheck" type="submit" id="searchButton">
-            Search
-          </button>
-        </form>
+        <div  class="navbar  colorbhcheck" id="checkId">
+
+        </div>
+        <form class="d-flex form-search" role="search"  id="searchButton">
+        <input class="form-control me-2" type="search" aria-label="Search" id="searchInput"/>
+        <button class="btn btn-outline-success colorbhcheck" type="submit">
+          Search
+        </button>
+      </form>
       </div>
   
   
@@ -221,8 +223,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="../script/data.js"></script>
-    <script src="../script/upcomingEvents.js"></script>
-    <script src="../script/checkBoxes.js"></script>
+    <script type="module" src="../script/upcomingEvents.js"></script>
   </body>
 </html>
